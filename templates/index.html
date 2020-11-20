@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+</head>
+<body>
+    <div>
+        <h1>Instagram Prediction</h1>
+        <form action="{{url_for('predict')}}"method="post">
+            <input type="text" name="followers" placeholder="followers" required="required" />
+            <input type="text" name="following" placeholder="following" required="required" />
+            <input type="text" name="posts" placeholder="posts" required="required" />
+            <input type="text" name="desc" placeholder="description length" required="required" />
+            <input type="text" name="words" placeholder="no of words in the name given" required="required" />
+            <input type="text" name="username" placeholder="username & full name equal or not" required="required" />
+            <input type="text" name="private" placeholder="private account" required="required" />
+            <input type="text" name="profile" placeholder="profile pic" required="required" />
+            <button type="submit">Predict</button>
+        </form>
+        <br>
+        <br>
+        {{prediction_text}}
+    </div>
+</body>
+</html>
