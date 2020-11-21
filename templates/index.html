@@ -1,26 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ML API</title>
-</head>
-<body>
-    <div>
-        <h1>Instagram Prediction</h1>
-        <form action="{{url_for('predict')}}"method="post">
-            <input type="text" name="followers" placeholder="followers" required="required" />
-            <input type="text" name="following" placeholder="following" required="required" />
-            <input type="text" name="posts" placeholder="posts" required="required" />
-            <input type="text" name="desc" placeholder="description length" required="required" />
-            <input type="text" name="words" placeholder="no of words in the name given" required="required" />
-            <input type="text" name="username" placeholder="username & full name equal or not" required="required" />
-            <input type="text" name="private" placeholder="private account" required="required" />
-            <input type="text" name="profile" placeholder="profile pic" required="required" />
-            <button type="submit">Predict</button>
-        </form>
-        <br>
-        <br>
-        {{prediction_text}}
+  <head>
+    <title>Home</title>
+
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Boostrap Core CSS-->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+    <!-- Animate CSS -->
+    <link href="../static/css/animate.css" rel="stylesheet" />
+
+    <!-- Google fonts -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Oxygen:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Qwigley"
+    />
+    <!-- Font awesome -->
+    <link
+      href="font-awesome-4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- Start wrapper -->
+    <div class="wrapper">
+      <div class="col-md-12">
+        <!-- Logo -->
+        <div class="brand wow fadeIn" data-wow-delay="0.1s">
+            Safer Instagram
+          <div class="title">- HOME -</div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+           
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="services.html">News</a>
+              </li>
+              <li>
+                <a href="contact.html">Model</a>
+              </li>
+              <li>
+                <a href="about.html">Help</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /navbar-collapse -->
+        </nav>
+        <!-- End nav -->
+
+        <!-- Start main image and the text below -->
+        <div class="col-md-12 wow fadeIn cente" data-wow-delay="0.1s">
+          <img src="../static/img/1.jpg" alt="img" class="resp main-image" />
+        </div>
+        <!-- End main image and the text below -->
+
+        <!-- Start left column -->
+        <div class="box-home col-md-4 col-xs-offset-1">
+          <h3>
+            This website aims to create awareness on how to use social media applications like instagram more effectively and safely. We help you to recognise fake users and also guide you through the right path of using social media.
+          </h3>
+        </div>
+        <!-- End left column -->
+
+        <!-- Start right image -->
+        <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+          <div class="first">
+            <div class="square wow fadeInDown" data-wow-delay=".5s"></div>
+          </div>
+          <img src="../static/img/2.jpg" alt="img" class="photo-home" />
+        </div>
+        <!-- End right image -->
+
+        <!-- Start footer -->
+        <div class="footer col-md-6 col-xs-offset-3">
+          <h5>
+
+            <a href="https://github.com/nandanasreeraj123/Safer_Instagram">GitHub</a>
+          </h5>
+        </div>
+        <!-- End footer -->
+      </div>
+      <!-- End col-md-12 -->
     </div>
-</body>
+    <!-- End wrapper -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="../static/js/jquery-1.11.0.js"></script>
+    <!-- Boostrap JS -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- Smooth scroll JS -->
+    <script src="../static/js/smoothscroll.js"></script>
+
+    <!-- Wow JavaScript -->
+    <script src="../static/js/wow.js"></script>
+
+    <script>
+      new WOW().init();
+    </script>
+  </body>
 </html>

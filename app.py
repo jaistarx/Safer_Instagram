@@ -13,6 +13,19 @@ model=load_model(os.path.join(os.path.abspath(os.path.dirname(__file__)),"insta.
 @app.route('/')
 def home():
     return render_template('index.html')
+@app.route('/services.html')
+def service():
+    return render_template('services.html')
+@app.route('/contact.html')
+def mod():
+    return render_template('contact.html')
+@app.route('/about.html')
+def help():
+    return render_template('about.html')
+@app.route('/index.html')
+def ind():
+    return render_template('index.html')
+
 @app.route('/predict', methods=['POST'])
 def predict():
     int_features = [str(x) for x in request.form.values()]
@@ -36,11 +49,12 @@ def predict():
 
     prediction = model.predict_classes(u)
 
+
     if(prediction[0]==1):
         output = "Yes"
     else:
         output = "No"
-    return render_template('index.html', prediction_text= 'Fake: {}'.format(output))
+    return render_template('contact.html', prediction_text = '{}'.format(output))
 
 if __name__ == "__main__":
     app.run(debug=True)
